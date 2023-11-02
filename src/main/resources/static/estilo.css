@@ -8,20 +8,31 @@ font-family: 'Quicksand', sans-serif;
 
 
 .inav{
-    margin-right: 15px;
+   margin:auto;
+   
 }
 
+.inav .nav-item img{
+width: 15px;
+height: 15px;
 
+}
+
+.sessaonovidades h1{
+font-weight: 700;
+
+}    
 
 .container-fluid img{
-
+    
     display:flex;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 120px;
-    height: 120px;
+    margin:auto;
+    width: 100px;
+    height: 100px;
     transition: width 2s, height 2s, 
                 transform 2s, border-radius 2s;
+
+
  }
     
  .container-fluid img:hover{
@@ -30,10 +41,25 @@ font-family: 'Quicksand', sans-serif;
  border-radius: 120px; 
 }
     
+.sectionicones{
+    display: flex;
+    background-image: url(img/bannerapp1.png);
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoapp{
+   
+    
+width:200px;
+height:30px;
+}
+
 
 
 li {
-    display: inline-block;
+    display: inline-flex;
     list-style: none;
     margin-left: 20px;
     cursor: pointer;
@@ -42,13 +68,10 @@ li {
     
 }
 
-li:hover{
-
-}
 
 
 .nav-item:hover{
-    color: rgb(231, 133, 133);
+    color: rgb(105, 40, 3);
     transition: .2s;
     transform: scale(1.2);
     font-weight:bold;
@@ -73,6 +96,126 @@ section, nav, footer {
         margin: auto;
         padding: 40px;
     }
+
+
+.cardsnovidades{
+
+    width:100%;
+    height: 500px;
+}
+
+.novidadefotos{
+    display: flex;
+    position: relative;
+    
+
+}
+
+
+
+    .novidades .cardsnovidades{
+        display: flex;
+        margin-top: 60px;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .fotopuppy{
+       
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(img/bolopuppy.jpg);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+.fotopuppy:hover{
+transition: 0.3s;
+transform: scale(1.1);
+}
+
+
+
+    .fotowhey{
+
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(img/bolowhey.png);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+    .fotowhey:hover{
+        transition: 0.3s;
+        transform: scale(1.1);
+        }
+
+
+
+
+    .fotodiet{
+
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(img/bolofat.png);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+    .fotodiet:hover{
+        transition: 0.3s;
+        transform: scale(1.1);
+        }
+
+
+
+.textopuppy p{
+
+position: absolute;
+text-decoration:none;
+font-size: 1.8rem;
+font-weight: 700;
+color:white;
+top: 30%;
+left: 4%;
+}
+
+
+.textowhey p{
+
+    position: absolute;
+    text-decoration:none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:white;
+    top: 30%;
+    left: 14%;
+    
+    }
+
+
+    .textodiet p{
+
+        position: absolute;
+        text-decoration:none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color:white;
+        top: 30%;
+        left: 16%;
+        }
+
+    
+
+
+
 .sectioncontato {
     background-image: url(img/contato.jpg);
     width: 100%;
@@ -189,6 +332,11 @@ h1, h3, h4, h5 {
     }
 
 
+
+    .rounded{
+    border-radius: 20px;
+    }
+
 .quemsomos1, .quemsomos2{
     width: 100%;
     height: 500px;
@@ -196,6 +344,7 @@ h1, h3, h4, h5 {
     position: relative;
     text-align: center;
     top: 0px;
+    
 
 }
 
@@ -398,7 +547,7 @@ h1, h3, h4, h5 {
     display: inline-block;
     float: none;
     margin: auto;
-   
+  
 }
 
  
@@ -635,5 +784,62 @@ div.bolosimplessabores img{
     @media(max-width:768px){
       .fotossabores{
         flex-direction: column;
-      }
+      }}
+
+   /*------------------------PAGINA DETALHES PEDIDO*/
+   .sessaocliente{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+   }
+
+      /*   
+      
+       <div class="sectionicones">
+      
+          <div class="grid text-center">
+            <div class="g-col-4"><span class="material-symbols-outlined">cake</span> 
+              <div class="icones"><b>Bolos</b></div>Produção de bolos sempre fresquinhos</div>
+
+            <div class="g-col-4"><span class="material-symbols-outlined">kebab_dining</span> 
+              <div class="icones"><b>Sabores</b></div>Qualidade e variedade para atender todos os gostos</div>
+
+            <div class="g-col-4"><span class="material-symbols-outlined">local_shipping</span> 
+              <div class="icones"><b>Cidade</b></div>Entregamos em todo estado de SP</div>
+          </div>
+        </div>
+      
+
+<div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/foto1.jpg" class="d-block w-100" alt="Cachorro">
+                      <div class="carousel-caption d-none d-md-block text-black">
+                          <h1>Primavera</h1>
+                          <p><h3>Peças coloridas e modernas para você.</h3></p>
+                      </div>
+                    </div>
+      
+                    <div class="carousel-item">
+                      <img src="img/bexiga1.jpg" class="d-block w-100" alt="Cachorro">
+                      <div class="carousel-caption d-none d-md-block text-black">
+                          <h1>PARABÉNS DOGUINHO</h1>
+                          <p><h3>Você é muito querido!!</h3></p>
+                      </div>            
+                    </div>
+
+</div>
+
+
+
+
+  <div class="novidadefotos">
+              <a href="https://sodiedoces.com.br/bolos">
+              <div class="bolodiet">
+                <p>BOLO DIET</p>             
+              </div>
+            </a>
+            </div>
+
+      */
 

@@ -1,0 +1,814 @@
+
+*{
+margin:0px;
+padding:0px;
+font-family: 'Quicksand', sans-serif;
+
+}
+
+
+.inav{
+   margin:auto;
+   
+}
+
+.inav .nav-item img{
+width: 15px;
+height: 15px;
+
+}
+
+.sessaonovidades h1{
+font-weight: 700;
+
+}    
+
+.container-fluid img{
+    
+    display:flex;
+    margin:auto;
+    width: 100px;
+    height: 100px;
+    transition: width 2s, height 2s, 
+                transform 2s, border-radius 2s;
+
+
+ }
+    
+ .container-fluid img:hover{
+               
+ transform: rotate(360deg);
+ border-radius: 120px; 
+}
+    
+.sectionicones{
+    display: flex;
+    background-image: url(./bannerapp2.png);
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoapp{
+   
+    
+width:200px;
+height:30px;
+}
+
+
+
+li {
+    display: inline-flex;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    color: black;
+    font-style:inherit;
+    
+}
+
+
+
+.nav-item:hover{
+    color: rgb(105, 40, 3);
+    transition: .2s;
+    transform: scale(1.2);
+    font-weight:bold;
+    
+}
+
+
+
+section, nav, footer {
+        font-family: 'Quicksand', sans-serif;
+        display: block;
+        top:0px;
+    }
+
+.sectionicones {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        text-decoration:wavy;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        padding: 40px;
+    }
+
+
+.cardsnovidades{
+
+    width:100%;
+    height: 500px;
+}
+
+
+
+
+    .novidades .cardsnovidades{
+        display: flex;
+        margin-top: 60px;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .fotopuppy{
+       
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(./bolopuppy.jpg);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+
+    .fotowhey{
+
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(./bolowhey.png);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+    .fotodiet{
+
+width: 270px;
+height: 380px;
+border-radius: 30px;
+background-image: url(./bolofat.png);
+background-repeat:no-repeat;
+background-attachment:inherit;
+background-position: cover;
+    }
+
+
+/*.bolopuppy p{
+
+display: flex;
+text-align: center;
+text-decoration:none;
+font-size: 1.8rem;
+font-weight: 700;
+color:white;
+text-align: center;
+
+}*/
+
+.textopuppy p {
+      display: flex;
+    text-decoration:none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+    
+    }
+
+    .textowhey p{
+    
+        display: flex;
+        text-align: center;
+        text-decoration:none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color:white;
+        align-content: center;
+        
+        }
+
+    .textodiet p{
+    
+        display: flex;
+        text-align: center;
+        text-decoration:none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color:white;
+        align-content: center;
+        
+        }
+
+
+
+.sectioncontato {
+    background-image: url(img/contato.jpg);
+    width: 100%;
+    height: 40px;
+
+}
+
+.sectioncontato1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sectioncontato2 {
+    background-image: url(img/contato.jpg);
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+
+
+}
+
+.endereco, .email, .telefone {
+    width: 20%;
+    height: 250px;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.card-body{
+    border-style: groove;
+}
+
+i {font-size:xx-large;
+
+}
+
+h1, h3, h4, h5 {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+.card-group, .card{
+        border-style:none;
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding: 30px;
+        font-size: 15px;
+        align-items: center;
+    }
+.acessoblog{
+        width: 500px;
+        height: 500px;
+        right: 30px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 200px;
+        background-color: rebeccapurple;
+    }
+
+.icones{
+        font-family: 'Quicksand', sans-serif;
+        font-style: italic;
+        text-decoration: double;
+        color:red;
+        border: 2rem;
+    }
+
+.baner{
+    width: 100%;
+    height: 50px;
+    background-image: url("img/baner.jpg");
+
+}    
+
+.blog{
+    width: 50%;
+    height: 500px;
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+
+}
+.blog img{
+    float: left;}
+
+.textoblog{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); 
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+        padding: 40px;
+    }
+
+
+.quemsomos1, .quemsomos2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    top: 0px;
+
+}
+
+.textoquemsomos1{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(247, 199, 171);
+}
+
+.textoquemsomos2{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    left: 20px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(247, 199, 171);;
+}
+
+.formulario { background-color: #ffffff;                   
+    font-size: 10pt; 
+    text-align: center;           
+    border-style: groove;
+    height:400px; 
+    width: 35%;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: auto;}
+
+.localizacao { display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffffff;
+        border-style: groove;
+        height: 400px;
+        width: 35%;}      
+
+.formulario2 {                  
+            font-size: 10pt; 
+            text-align: center;           
+            border-style: groove;
+            background-color: #ffffff;
+            width: 25%;
+            display: inline-block;
+            margin: auto;
+}  
+
+/*PRODUTOS----------------------------------------*/
+
+
+
+
+.tiposdebolo{
+    
+    
+    width: 100%;
+    height: 1000px;
+    background: #ffffff;
+   
+  
+
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(1,1fr);
+    border-radius: 10px;
+    grid-gap:20px;
+      grid-template-areas:
+        "foto1" 
+        "foto2"
+        "foto3" 
+        "foto4" 
+        
+}
+
+
+.foto-1{
+    height: 250px;
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    
+    
+    grid-area:foto1;
+    background-image: url(./img/bolosimpres.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.foto-2{
+        height: 250px;
+        width: 100%;
+        border-radius: 10px;
+        margin: 20px;   
+        box-shadow: 5px 5px 20px black;
+
+        grid-area:foto2;
+        background-image: url(./img/personali.png);
+        background-position: center;
+        background-size: cover;
+}
+    
+.foto-3{
+    height: 250px;
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+   
+    
+    grid-area:foto3;
+    background-image: url(./img/especiais3.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.foto-4{
+        height: 250px;
+        width: 100%;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px black;
+        
+        
+        grid-area:foto4;
+        background-image: url(./img/caketisco3.jpg);
+        background-position: center;
+        background-size: cover;
+}
+    
+
+.tiposdebolo .foto{
+    width: 95%;
+}
+
+.foto:hover{
+    transition: .5s;
+    transform: scale(1.1);
+    }
+    
+.foto .titulo{
+    display: flex;
+    align-self: center ;
+}
+
+
+.titulo{
+        display: flex;
+        width: 95%;
+        height: 60px;
+        box-sizing: border-box;
+        position:absolute;
+        background: rgb(27, 27, 27, .5);
+        color: white;
+        justify-content: center;   
+        margin-top: 4%;    
+       }
+
+
+.titulo h1{
+    margin:10px;
+    font-size: clamp(0.7em, 1.5em + 3vw, 2em);
+}
+
+
+
+.fotocachorros{
+	display: flex;
+	flex-wrap:wrap;
+	   width: 100%;
+       opacity:60%;
+       margin-top: 210px;
+	
+}
+
+
+
+/*PRODUTOS.BOLOSIMPLES...........................................*/
+.div1{
+    width: 100%;
+    height:500px;
+    background-color: bisque;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    margin: auto;
+  
+}
+
+ 
+.simples{
+    width: 100%;
+    height: 70px;
+    background-color: bisque;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+.div1{
+    width: 100%;
+    height:600px;
+    background-color:bisque;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.bolosimplessabores{
+    background-color: transparent;
+    width: 30%;
+    height: 400px;
+    margin-right: 10px;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+    position: relative;
+    margin-top: -10%;
+}
+
+div.bolosimplessabores img{
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    border-style: groove;
+}
+
+
+.textodescricao {
+    width: 81.6%;
+    height:155px;
+    background-color:rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 81%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    position: relative;
+    border-style: groove;
+}
+
+.divtexto{
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.containerbolosimples{
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 30px, 0;
+    margin-top: 30px;
+    }
+    
+    .fotossabores{
+      display: flex;
+      gap: 20px;
+       
+    }
+    
+    .column1{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-left: 50px;
+    }
+    
+    .column2{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+       
+    }
+.column3{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-right: 50px;
+    }
+    
+.column4{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-right: 50px;
+      height: 600px;
+    }
+.column5{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: auto;
+      height: 350px;
+      width:80%;
+      justify-content:center;
+    }    
+    
+    
+    
+    
+    .fotosalmao{
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 2px rgb(49, 49, 49);
+    background:radial-gradient(#111 50%, #000000 100%);
+    overflow: hidden;
+    position: relative;
+    }
+    
+    .fotosalmao img{
+      transform: scale(1.0);
+      transition:  all .3s ease-out;
+    
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      
+    
+    }
+    
+    .fotosalmao:hover img{
+      transform: scale(1.1) translateY(-20px);
+      opacity: 0.3;
+    }
+    
+       
+    
+    
+    .fotosimples{
+    
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 2px rgb(49, 49, 49);
+    background:radial-gradient(#111 50%, #000000 100%);
+    overflow: hidden;
+    position: relative;
+    }
+    
+      .fotosimples:hover img{
+        transform: scale(1.1) translateY(-20px);
+        opacity: 0.3;
+      }
+    
+    .produtosimples img{
+      max-width: 100%;
+      display: flex;
+      object-fit: cover;
+    }
+    
+    .fotosimples img{
+      transform: scale(1.0);
+      transition:  all .3s ease-out;
+    
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      
+    }
+    
+           
+    .descricao{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color:#fff;
+    font-size: 18px;
+        }
+    
+    .descricao h3{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 0 20px;
+    transform: translateY(30px);  
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    }
+    
+    .descricao p{
+      transform: translateY(30px);  
+      opacity: 0;
+      transition: all 0.3s ease-out 0.2s;
+    }
+    
+    .fotosimples:hover .descricao h3{
+    opacity: 1;
+    transform: translateY(0);  
+    }
+    
+    .fotosimples:hover .descricao p{
+    opacity: 1;
+    transform: translateY(0);  
+    }
+    
+    
+    .fotosalmao:hover .descricao h3{
+    opacity: 1;
+    transform: translateY(-150px);  
+    }
+    
+    .fotosalmao:hover .descricao p{
+    opacity: 1;
+    transform: translateY(-150px);  
+    }
+    
+    
+    @media(max-width:768px){
+      .fotossabores{
+        flex-direction: column;
+      }
+
+   
+
+      /*   
+      
+       <div class="sectionicones">
+      
+          <div class="grid text-center">
+            <div class="g-col-4"><span class="material-symbols-outlined">cake</span> 
+              <div class="icones"><b>Bolos</b></div>Produção de bolos sempre fresquinhos</div>
+
+            <div class="g-col-4"><span class="material-symbols-outlined">kebab_dining</span> 
+              <div class="icones"><b>Sabores</b></div>Qualidade e variedade para atender todos os gostos</div>
+
+            <div class="g-col-4"><span class="material-symbols-outlined">local_shipping</span> 
+              <div class="icones"><b>Cidade</b></div>Entregamos em todo estado de SP</div>
+          </div>
+        </div>
+      
+
+<div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/foto1.jpg" class="d-block w-100" alt="Cachorro">
+                      <div class="carousel-caption d-none d-md-block text-black">
+                          <h1>Primavera</h1>
+                          <p><h3>Peças coloridas e modernas para você.</h3></p>
+                      </div>
+                    </div>
+      
+                    <div class="carousel-item">
+                      <img src="img/bexiga1.jpg" class="d-block w-100" alt="Cachorro">
+                      <div class="carousel-caption d-none d-md-block text-black">
+                          <h1>PARABÉNS DOGUINHO</h1>
+                          <p><h3>Você é muito querido!!</h3></p>
+                      </div>            
+                    </div>
+
+</div>
+
+
+
+
+  <div class="novidadefotos">
+              <a href="https://sodiedoces.com.br/bolos">
+              <div class="bolodiet">
+                <p>BOLO DIET</p>             
+              </div>
+            </a>
+            </div>
+
+      */
+
