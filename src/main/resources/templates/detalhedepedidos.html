@@ -97,11 +97,11 @@
       <section>
         <div class="sessaocliente">
 
-        <form action="/action_page.php">
+        <form action="getDetalhePedido" th:object="${detalhe}" method="post">
           <label for="email" class="form-label">001:</label>
           <div class="mb-3 mt-3">
             <label for="nome" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="email" placeholder="Bruno Soares Nunes" name="email" disabled>
+            <input type="text" class="form-control" id="email" th:field="*{pedidos.usuario.nomeUser}" name="email" disabled>
           </div>
 
 

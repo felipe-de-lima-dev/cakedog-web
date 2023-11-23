@@ -1,10 +1,12 @@
 package br.com.cakedog.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,6 +22,10 @@ public class Pedidos {
 	private String statusPedido;
 	private double valorPedido;
 	private String observacaoPedido;
+	
+	@OneToMany
+	private List<Produtos> produtos;
+	
 	public Long getIdPedido() {
 		return idPedido;
 	}
@@ -61,6 +67,12 @@ public class Pedidos {
 	}
 	public void setObservacaoPedido(String observacaoPedido) {
 		this.observacaoPedido = observacaoPedido;
+	}
+	public List<Produtos> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(List<Produtos> produtos) {
+		this.produtos = produtos;
 	}
 	
 	

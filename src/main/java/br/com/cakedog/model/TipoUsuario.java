@@ -2,8 +2,8 @@ package br.com.cakedog.model;
 
 public enum TipoUsuario {
 	
-	ADMINISTRADOR(0),
-    CLIENTE(1);
+	ADMINISTRADOR(1),
+    CLIENTE(0);
     
     private int tipo;
 

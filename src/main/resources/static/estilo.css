@@ -794,6 +794,140 @@ div.bolosimplessabores img{
     margin-bottom: 2%;
    }
 
+   .divpromocao{
+    background-image: url(./img/plaquinha2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.divpai{
+    display: flex;
+
+}
+.divartigo{
+    width: 20%;
+    background-color: transparent; 
+    display: flex;
+}
+
+.divreceitaevideos{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+aside{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin: auto;
+    top: 0%;
+    padding: 5%;
+    display: block;
+}
+
+.artigo1{
+    width: 100%;
+    height: 180px;
+    background-image: url(./img/artigo1.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    background-size:cover;
+    justify-content: center;
+    text-align: center;
+}
+
+.artigo2{
+    width: 100%;
+    height: 180px;
+    background-image: url(./img/artigo2.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-size:cover;
+    justify-content: center;
+    text-align: center;
+
+}
+.artigo3{
+    width: 100%;
+    height: 180px;
+    background-image: url(./img/artigo3.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-size:cover;
+    justify-content: center;
+    text-align: center;
+}
+
+.artigo4{
+    width: 100%;
+    height: 180px;
+    background-image: url(./img/artigo4.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-size:cover;
+    justify-content: center;
+    text-align: center;
+}
+
+.legendaartigos  {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.legendaartigos a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.legendaartigos p:hover {
+    transition: 0.5s;
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.divvideo{
+    width: 80%;
+    height: 500px;
+    background-color: #e02424;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.divreceita{
+    width: 80%;
+    height: 500px;
+    background-image: url(./img/receitadebolo2.jpg);
+    background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       /*   
       
        <div class="sectionicones">

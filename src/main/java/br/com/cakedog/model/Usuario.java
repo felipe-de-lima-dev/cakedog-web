@@ -12,90 +12,109 @@ import javax.persistence.ManyToOne;
 public class Usuario {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long idUser;
 	@Column(unique = true)
-	private String email;
-	private String senha;
-	private String cpf;
-	private String nome;
-	private boolean isClienteActive;
-	private String telefone;
-	private LocalDate dataInativo;
+	private String emailUser;
+	private String senhaUser;
+	private String cpfUser;
+	private String nomeUser;
+	private boolean isUserActive;
+	private String telefoneUser;
+	private LocalDate dtInativo;
 	private LocalDate dtNascimento;
 
 	@ManyToOne
 	private Endereco endereco;
 	
-	private int tipoUsuario;
-	public Long getId() {
-		return id;
+	private int tipoUser;
+
+	public Long getIdUser() {
+		return idUser;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setIdUser(Long idUser) {
+		this.idUser = idUser;
 	}
-	public String getEmail() {
-		return email;
+
+	public String getEmailUser() {
+		return emailUser;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setEmailUser(String emailUser) {
+		this.emailUser = emailUser;
 	}
-	public String getSenha() {
-		return senha;
+
+	public String getSenhaUser() {
+		return senhaUser;
 	}
-	public void setSenha(String senha) {
-		this.senha = senha;
+
+	public void setSenhaUser(String senhaUser) {
+		this.senhaUser = senhaUser;
 	}
-	public String getCpf() {
-		return cpf;
+
+	public String getCpfUser() {
+		return cpfUser;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+
+	public void setCpfUser(String cpfUser) {
+		this.cpfUser = cpfUser;
 	}
-	public String getNome() {
-		return nome;
+
+	public String getNomeUser() {
+		return nomeUser;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setNomeUser(String nomeUser) {
+		this.nomeUser = nomeUser;
 	}
-	public boolean isClienteActive() {
-		return isClienteActive;
+
+	public boolean isUserActive() {
+		return isUserActive;
 	}
-	public void setClienteActive(boolean isClienteActive) {
-		this.isClienteActive = isClienteActive;
+
+	public void setUserActive(boolean isUserActive) {
+		this.isUserActive = isUserActive;
 	}
-	public String getTelefone() {
-		return telefone;
+
+	public String getTelefoneUser() {
+		return telefoneUser;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+
+	public void setTelefoneUser(String telefoneUser) {
+		this.telefoneUser = telefoneUser;
 	}
-	public LocalDate getDataInativo() {
-		return dataInativo;
+
+	public LocalDate getDtInativo() {
+		return dtInativo;
 	}
-	public void setDataInativo(LocalDate dataInativo) {
-		this.dataInativo = dataInativo;
+
+	public void setDtInativo(LocalDate dtInativo) {
+		this.dtInativo = dtInativo;
 	}
+
 	public LocalDate getDtNascimento() {
 		return dtNascimento;
 	}
+
 	public void setDtNascimento(LocalDate dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
-	public int getTipoUsuario() {
-		return tipoUsuario;
-	}
-	public void setTipoUsuario(int tipoUsuario) {
-		this.tipoUsuario = tipoUsuario;
-	}
+
 	public Endereco getEndereco() {
 		return endereco;
 	}
+
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
-	
+
+	public int getTipoUser() {
+		return tipoUser;
+	}
+
+	public void setTipoUser(int tipoUser) {
+		this.tipoUser = tipoUser;
+	}
 }
 
 

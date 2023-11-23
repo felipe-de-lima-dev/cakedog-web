@@ -27,17 +27,17 @@ public class LoginController {
 
 	@PostMapping("efetuar-login")
 	public ModelAndView paginacliente(String usuario, String senha) {
-		Usuario usuarioretornado = repository.findByEmail(usuario);
+		Usuario usuarioretornado = repository.findByEmailUser(usuario);
 		
 
-		if (usuarioretornado != null && usuarioretornado.getSenha().equals(senha)&& usuarioretornado.getTipoUsuario()==0) {
+		if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha)&& usuarioretornado.getTipoUser()==1) {
 			List<Pedidos> pedidos= pedidosRepository.findAll();
 			
 			ModelAndView view= new ModelAndView("administrador");
 			view.addObject("pedidos", pedidos);
 			return view;
 
-		} else if (usuarioretornado != null && usuarioretornado.getSenha().equals(senha)&& usuarioretornado.getTipoUsuario()==1) {
+		} else if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha)&& usuarioretornado.getTipoUser()==0) {
 			ModelAndView view= new ModelAndView("paginacliente");
 			
 			return view;

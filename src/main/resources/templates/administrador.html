@@ -108,7 +108,7 @@
             <tbody>
               <tr th:each="pedido : ${pedidos}">
         <td th:text="${pedido.idPedido}"></td>
-        <td th:text="${pedido.usuario.nome}"></td>
+        <td th:text="${pedido.usuario.nomeUser}"></td>
         <td th:text="${pedido.statusPedido}"></td>
         <td> <a th:href="@{/detalhe/{id}(id=${pedido.idPedido})}"> Detalhes </a> </td>
         
