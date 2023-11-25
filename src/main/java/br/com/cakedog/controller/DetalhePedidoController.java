@@ -24,7 +24,7 @@ public class DetalhePedidoController {
 	public ModelAndView detalhePedido(@PathVariable Long idPedido) {
 		Pedidos pedido = repositoryPedidos.findById(idPedido).get();
 		DetalhePedido detalhe = repo.findByPedidos(pedido);
-		ModelAndView view = new ModelAndView("detalhedepedidos");
+		ModelAndView view = new ModelAndView("detalhedepedidos.html");
 		view.addObject("detalhe", detalhe);
 		return view;
 	}
