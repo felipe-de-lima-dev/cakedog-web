@@ -4,24 +4,26 @@ import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-@Entity
+@Entity(name = "endereco_user")
 public class Endereco {
+	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idEndereco;
 	@OneToOne
 	private Usuario usuario;
-	private String logradouro;
+	private String endereco;
 	private String bairro;
 	private String cep;
 	private String cidade;
 	private String estadoUf;
 	private LocalDate dtCadastro;
 	private String tipoEndereco;
+	
 	public Long getIdEndereco() {
 		return idEndereco;
 	}
@@ -35,10 +37,10 @@ public class Endereco {
 		this.usuario = usuario;
 	}
 	public String getLogradouro() {
-		return logradouro;
+		return endereco;
 	}
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
+	public void setLogradouro(String endereco) {
+		this.endereco = endereco;
 	}
 	public String getBairro() {
 		return bairro;

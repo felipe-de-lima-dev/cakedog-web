@@ -5,13 +5,15 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-@Entity
+@Entity(name = "usuario")
 public class Usuario {
+	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUser;
 	@Column(unique = true)
 	private String emailUser;
@@ -22,12 +24,11 @@ public class Usuario {
 	private String telefoneUser;
 	private LocalDate dtInativo;
 	private LocalDate dtNascimento;
+	private boolean tipoUser;
 
 	@ManyToOne
 	private Endereco endereco;
 	
-	private int tipoUser;
-
 	public Long getIdUser() {
 		return idUser;
 	}
@@ -108,11 +109,11 @@ public class Usuario {
 		this.endereco = endereco;
 	}
 
-	public int getTipoUser() {
+	public boolean getTipoUser() {
 		return tipoUser;
 	}
 
-	public void setTipoUser(int tipoUser) {
+	public void setTipoUser(boolean tipoUser) {
 		this.tipoUser = tipoUser;
 	}
 }

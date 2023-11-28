@@ -13,10 +13,10 @@ public class DetalhePedido {
 	private Long id;
 	
 	@ManyToOne
-	private Pedidos pedidos;
+	private Pedido pedido;
 	
 	@ManyToOne
-	private Produtos produtos;
+	private Produto produto;
 
 	public Long getId() {
 		return id;
@@ -26,20 +26,20 @@ public class DetalhePedido {
 		this.id = id;
 	}
 
-	public Pedidos getPedidos() {
-		return pedidos;
+	public Pedido getPedidos() {
+		return pedido;
 	}
 
-	public void setPedidos(Pedidos pedidos) {
-		this.pedidos = pedidos;
+	public void setPedidos(Pedido pedido) {
+		this.pedido = pedido;
 	}
 
-	public Produtos getProdutos() {
-		return produtos;
+	public Produto getProdutos() {
+		return produto;
 	}
 
-	public void setProdutos(Produtos produtos) {
-		this.produtos = produtos;
+	public void setProdutos(Produto produto) {
+		this.produto = produto;
 	}
 	
 	

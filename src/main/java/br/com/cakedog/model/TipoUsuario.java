@@ -20,7 +20,4 @@ public enum TipoUsuario {
 		this.tipo = tipo;
 	}
 	
-	
-	
-
 }

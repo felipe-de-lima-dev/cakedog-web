@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.cakedog.model.Pedidos;
+import br.com.cakedog.model.Pedido;
 import br.com.cakedog.model.Usuario;
 import br.com.cakedog.repository.PedidosRepository;
 import br.com.cakedog.repository.UsuarioRepository;
@@ -29,14 +29,14 @@ public class LoginController {
 	public ModelAndView paginacliente(String usuario, String senha) {
 		Usuario usuarioretornado = repository.findByEmailUser(usuario);		
 
-		if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha)&& usuarioretornado.getTipoUser()==1) {
-			List<Pedidos> pedidos= pedidosRepository.findAll();
+		if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha) && usuarioretornado.getTipoUser() == true) {
+			List<Pedido> pedido= pedidosRepository.findAll();
 			
 			ModelAndView view= new ModelAndView("administrador");
-			view.addObject("pedidos", pedidos);
+			view.addObject("pedidos", pedido);
 			return view;
 
-		} else if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha)&& usuarioretornado.getTipoUser()==0) {
+		} else if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha) && usuarioretornado.getTipoUser() == false) {
 			ModelAndView view = new ModelAndView("paginacliente");
 			
 			return view;
