@@ -13,27 +13,22 @@ public class ProdutosController {
 	
 	@GetMapping("produtos.bolosimples")
 	public String produtosbolosimples() {
-		return"produtos.bolosimples";
+		return"bolo-simples";
 	}
 	
 	@GetMapping("produtos.bolospersonalizados")
 	public String produtosbolospersonalizados() {
-		return"produtos.bolospersonalizados";
+		return"bolos-personalizados";
 	}
 	
 	@GetMapping("produtos.bolosespeciais")
 	public String produtosbolosespeciais() {
-		return"produtos.bolosespeciais";
+		return"bolos-especiais";
 	}
-	
 
 	@GetMapping("produtos.caketiscos")
 	public String produtoscaketiscos() {
-		return"produtos.caketiscos";
+		return"caketiscos";
 	}
-	
-	
-	
-	
-	
+
 }

@@ -9,5 +9,5 @@ import br.com.cakedog.model.Pedido;
 @Repository
 public interface DetalhePedidoRepository extends JpaRepository<DetalhePedido, Long>{
 
-	public DetalhePedido findByPedidos(Pedido pedido);
+	public DetalhePedido findByPedido(Pedido pedido);
 }

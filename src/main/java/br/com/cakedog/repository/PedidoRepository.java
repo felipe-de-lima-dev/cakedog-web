@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import br.com.cakedog.model.Pedido;
 
 @Repository
-public interface PedidosRepository extends JpaRepository<Pedido, Long>{
+public interface PedidoRepository extends JpaRepository<Pedido, Long>{
 	
 
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
 
@@ -63,65 +63,50 @@
 </header>
     <main>
 
-        <section>
-
-
-            <div class="divpai">
-
-                <div class="divartigo">
-                    <aside>
-                        <div class="artigo1"></div>
-                        <div class="legendaartigos">
-                            <a href="https://opinioescertificadas.com.br/festa-de-aniversario-de-cachorro/"><p>Dicas de
-                                como fazer uma festa de
-                                aniversário de cachorro</p></a>
-                        </div>
-
-                        <div class="artigo2"></div>
-                        <div class="legendaartigos">
-                            <a href="cobasi.com.br/kit-festa-na-caixa-para-caes-delicias-do-chef-31004352/p/"><p>Kit
-                                Festa na Caixa para Cães</p></a>
-                        </div>
-
-                        <div class="artigo3"></div>
-                        <div class="legendaartigos">
-                            <a href="https://www.petz.com.br/blog/cachorros/festa-de-aniversario-para-cachorro/#:~:text=Ofere%C3%A7a%20petiscos%20e%20alimentos%20especiais%20para%20cachorros&text=E%20que%20ocasi%C3%A3o%20pode%20ser,bifinhos%2C%20biscoitinhos%2C%20entre%20outros.">
-                                <p>10 dicas para uma inesquecível festa de aniversário para cachorro</p></a>
-                        </div>
-
-                        <div class="artigo4"></div>
-                        <div class="legendaartigos">
-                            <a href="https://www.blogdocasamento.com.br/tudo-que-voce-precisa-saber-para-organizar-uma-festa-pet-incrivel/">
-                                <p>Tudo que você precisa
-                                    saber para fazer uma Festa Pet incrível!</p></a>
-                        </div>
-
-                    </aside>
+        <section class="margincliente">
+            <form action="" method="">
+                <label class="form-label" for="email">001:</label>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="nome">Nome:</label>
+                    <input class="form-control" disabled id="nome" name="nome"
+                           th:field="*{detalhe.pedidos.usuario.nomeUser}" type="text">
                 </div>
-
-                <div class="divreceitaevideos">
-
-
-                    <div class="divvideo">
-
-                        <iframe allow="autoplay" allowfullscreen=""
-                                frameborder="1" height="100%" name="VideoBlog" sandbox="allow-forms allow-same-origin allow-scripts" src="https://www.youtube.com/embed/YXbz3F40VWw?&autoplay=1"
-                                width="100%"></iframe>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="cpf">CPF:</label>
+                    <input class="form-control" disabled id="cpf" name="cpf" type="text">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="email">E-mail:</label>
+                    <input class="form-control" disabled id="email" name="email" type="text">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="nascimento">Data de nascimento:</label>
+                    <input class="form-control" disabled id="nascimento" name="nascimento" type="text">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="telefone">Telefone:</label>
+                    <input class="form-control" disabled id="telefone" name="telefone" type="text">
+                </div>
+                <div class="row">
+                    <div class="form-group col"> Endereço: </br>
+                        <input class="form-control" disabled id="enderecoUser" name="enderecoUser"
+                               type="text" value="rua tanque velho">
+                    </div>
+                    <div class="form-group col"> Bairro: </br>
+                        <input class="form-control" disabled id="bairro" name="bairro" type="text" value="Vila nivi">
                     </div>
 
-                    <a href="https://www.petlove.com.br/dicas/receita-de-bolo-de-aniversario-para-cachorro">
-                        <div class="divreceita"></div>
-                    </a>
-
+                    <div class="form-group col"> cep: </br>
+                        <input class="form-control" disabled id="cep" name="cep" type="text" value="Vila nivi">
+                    </div>
                 </div>
-
-            </div>
+                <button class="btn-primary" name="excluir-dados" placeholder="Excluir dados">Excluir dados</button>
+            </form>
 
 
         </section>
-
-
     </main>
+
 
     <footer>
         <div class="bg-body-tertiary text-center">
@@ -136,4 +121,3 @@
 </body>
 
 </html>
-

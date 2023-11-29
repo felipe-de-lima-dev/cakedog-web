@@ -10,15 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.cakedog.model.Pedido;
 import br.com.cakedog.model.Usuario;
-import br.com.cakedog.repository.PedidosRepository;
+import br.com.cakedog.repository.PedidoRepository;
 import br.com.cakedog.repository.UsuarioRepository;
+
+import javax.transaction.Transactional;
 
 @Controller
 public class LoginController {
 	@Autowired
-	UsuarioRepository repository;
+	UsuarioRepository usuarioRepository;
 	@Autowired
-	PedidosRepository pedidosRepository;
+	PedidoRepository pedidoRepository;
 
 	@GetMapping("login")
 	public String login() {
@@ -26,25 +28,22 @@ public class LoginController {
 	}
 
 	@PostMapping("efetuar-login")
-	public ModelAndView paginacliente(String usuario, String senha) {
-		Usuario usuarioretornado = repository.findByEmailUser(usuario);		
+	public ModelAndView doLogin(String email, String senha) {
+		try {
+			Usuario usuarioRetornado = usuarioRepository.findByEmailUser(email);
 
-		if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha) && usuarioretornado.getTipoUser() == true) {
-			List<Pedido> pedido= pedidosRepository.findAll();
-			
-			ModelAndView view= new ModelAndView("administrador");
-			view.addObject("pedidos", pedido);
-			return view;
-
-		} else if (usuarioretornado != null && usuarioretornado.getSenhaUser().equals(senha) && usuarioretornado.getTipoUser() == false) {
-			ModelAndView view = new ModelAndView("paginacliente");
-			
-			return view;
-		}
-		
-		else {
-			ModelAndView view= new ModelAndView("login");
-			return view;
+			if(usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && usuarioRetornado.isTipoUser()) {
+				List<Pedido> pedido = pedidoRepository.findAll();
+				ModelAndView view = new ModelAndView("administrador");
+				view.addObject("pedido", pedido);
+				return view;
+			} else if (usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && !usuarioRetornado.isTipoUser()) {
+				return new ModelAndView("pagina-cliente");
+			} else {
+				return new ModelAndView("login");
+			}
+		} catch(Exception ex) {
+			return new ModelAndView("login");
 		}
 	}
 

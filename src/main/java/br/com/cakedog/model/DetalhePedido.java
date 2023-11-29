@@ -1,46 +1,38 @@
 package br.com.cakedog.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import lombok.Data;
 
-@Entity
+import javax.persistence.*;
+
+@Entity(name = "detalhe_pedido")
+@Data
 public class DetalhePedido {
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	
+	@EmbeddedId
+	private DetalhePedidoId id;
+
 	@ManyToOne
+	@JoinColumn(name = "id_pedido", insertable = false, updatable = false)
 	private Pedido pedido;
-	
+
 	@ManyToOne
+	@JoinColumn(name = "id_produto", insertable = false, updatable = false)
 	private Produto produto;
 
-	public Long getId() {
-		return id;
-	}
+	@ManyToOne
+	@JoinColumn(name = "id_cobertura_foto", insertable = false, updatable = false)
+	private CoberturaFoto coberturaFoto;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+	@ManyToOne
+	@JoinColumn(name = "id_cobertura_cor", insertable = false, updatable = false)
+	private CoberturaCor coberturaCor;
 
-	public Pedido getPedidos() {
-		return pedido;
-	}
+	@ManyToOne
+	@JoinColumn(name = "id_sabor", insertable = false, updatable = false)
+	private SaborBolo saborBolo;
 
-	public void setPedidos(Pedido pedido) {
-		this.pedido = pedido;
-	}
+	@ManyToOne
+	@JoinColumn(name = "id_formato_bolo", insertable = false, updatable = false)
+	private FormatoBolo formatoBolo;
 
-	public Produto getProdutos() {
-		return produto;
-	}
-
-	public void setProdutos(Produto produto) {
-		this.produto = produto;
-	}
-	
-	
 }
