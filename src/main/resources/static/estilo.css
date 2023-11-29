@@ -71,7 +71,7 @@ li {
 
 
 .nav-item:hover{
-    color: rgb(105, 40, 3);
+    color: #ce5a67;
     transition: .2s;
     transform: scale(1.2);
     font-weight:bold;
@@ -400,6 +400,7 @@ h1, h3, h4, h5 {
             border-style: groove;
             background-color: #ffffff;
             width: 25%;
+            height: 350px;
             display: inline-block;
             margin: auto;
 }  
@@ -794,12 +795,14 @@ div.bolosimplessabores img{
     margin-bottom: 2%;
    }
 
-   .divpromocao{
-    background-image: url(./img/plaquinha2.jpg);
-    background-size: cover;
+   /*.divpromocao{
+       
+    /*background-image: url(./img/bannerblog2.jpg);
+    background-size:cover;
+
     width: 100%;
     height: 300px;
-}
+}*/
 
 .divpai{
     display: flex;
@@ -915,6 +918,13 @@ aside{
     cursor: pointer;
 }
 
+
+/* -------------------------------------PAGINA CLIENTE------*/ 
+
+.margincliente{
+margin: 5%;
+
+}
 
 
 
