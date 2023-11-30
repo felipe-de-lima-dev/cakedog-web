@@ -33,9 +33,9 @@ public class LoginController {
 			Usuario usuarioRetornado = usuarioRepository.findByEmailUser(email);
 
 			if(usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && usuarioRetornado.isTipoUser()) {
-				List<Pedido> pedido = pedidoRepository.findAll();
+				//List<Pedido> pedido = pedidoRepository.findAll();
 				ModelAndView view = new ModelAndView("administrador");
-				view.addObject("pedido", pedido);
+				//view.addObject("pedido", pedido);
 				return view;
 			} else if (usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && !usuarioRetornado.isTipoUser()) {
 				return new ModelAndView("pagina-cliente");
