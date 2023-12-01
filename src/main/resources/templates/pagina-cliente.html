@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -64,43 +64,43 @@
     <main>
 
         <section class="margincliente">
-            <form action="" method="">
-                <label class="form-label" for="email">001:</label>
+            <form action="/delete-user" method="post" th:object="$usuario">
+                <label class="form-label" for="email" th:text="${idUser}">001:</label>
                 <div class="mb-3 mt-3">
                     <label class="form-label" for="nome">Nome:</label>
                     <input class="form-control" disabled id="nome" name="nome"
-                           th:field="*{pedido.usuario.nomeUser}" type="text">
+                           th:field="${usuario.nomeUser}" type="text">
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label" for="cpf">CPF:</label>
-                    <input class="form-control" disabled id="cpf" name="cpf" type="text">
+                    <input class="form-control" disabled id="cpf" name="cpf" th:field="${usuario.cpfUser}" type="text">
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label" for="email">E-mail:</label>
-                    <input class="form-control" disabled id="email" name="email" type="text">
+                    <input class="form-control" disabled id="email" name="email" th:field="${usuario.emailUser}" type="text">
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label" for="nascimento">Data de nascimento:</label>
-                    <input class="form-control" disabled id="nascimento" name="nascimento" type="text">
+                    <input class="form-control" disabled id="nascimento" name="nascimento" th:field="${usuario.dtNascimento}" type="text">
                 </div>
                 <div class="mb-3 mt-3">
                     <label class="form-label" for="telefone">Telefone:</label>
-                    <input class="form-control" disabled id="telefone" name="telefone" type="text">
+                    <input class="form-control" disabled id="telefone" name="telefone" th:field="${usuario.telefoneUser}" type="text">
                 </div>
                 <div class="row">
                     <div class="form-group col"> Endereço: </br>
                         <input class="form-control" disabled id="enderecoUser" name="enderecoUser"
-                               type="text" value="rua tanque velho">
+                               type="text" th:field="${usuario.enderecoUser.endereco}">
                     </div>
                     <div class="form-group col"> Bairro: </br>
-                        <input class="form-control" disabled id="bairro" name="bairro" type="text" value="Vila nivi">
+                        <input class="form-control" disabled id="bairro" name="bairro" type="text" th:field="${usuario.enderecoUser.bairro}">
                     </div>
 
                     <div class="form-group col"> cep: </br>
-                        <input class="form-control" disabled id="cep" name="cep" type="text" value="Vila nivi">
+                        <input class="form-control" disabled id="cep" name="cep" type="text"th:field="${usuario.enderecoUser.cep}">
                     </div>
                 </div>
-                <button class="btn-primary" name="excluir-dados" placeholder="Excluir dados">Excluir dados</button>
+                <button type="submit" class="btn-primary" name="excluir-dados" placeholder="Excluir dados">Excluir dados</button>
             </form>
 
 

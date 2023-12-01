@@ -1,5 +1,6 @@
 package br.com.cakedog.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,15 @@ public class LoginController {
 			Usuario usuarioRetornado = usuarioRepository.findByEmailUser(email);
 
 			if(usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && usuarioRetornado.isTipoUser()) {
-				//List<Pedido> pedido = pedidoRepository.findAll();
+				List<Pedido> pedidos = pedidoRepository.findAll();
 				ModelAndView view = new ModelAndView("administrador");
-				//view.addObject("pedido", pedido);
+				view.addObject("pedido", pedidos);
 				return view;
 			} else if (usuarioRetornado != null && usuarioRetornado.getSenhaUser().equals(senha) && !usuarioRetornado.isTipoUser()) {
-				return new ModelAndView("pagina-cliente");
+				Usuario usuario = usuarioRepository.findByEmailUser(email);
+				ModelAndView view = new ModelAndView("pagina-cliente");
+				view.addObject("usuario", usuario);
+				return view;
 			} else {
 				return new ModelAndView("login");
 			}
